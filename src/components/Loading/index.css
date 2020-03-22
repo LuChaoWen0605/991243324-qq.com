@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'pingFangSC-Light';
+/*  src: url('./../../../static/ttf/PingFangMedium.ttf');
+  src:
+    url('./../../../static/ttf/PingFangMedium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;*/
+}
+.loading-mask{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.6);
+  height:100%;
+  vertical-align: middle;
+  border-radius: 1px;
+}
+
+.loading-left-bg{
+  width: 75px;
+  height:  75px;
+  background-image: url("../../../static/login/login-loading.png");
+  background-repeat: no-repeat;
+  background-size: 56px;
+  margin: 0 auto;
+  position: relative;
+  top: calc(50% - 38px); /*偏移*/
+  background-position: center;
+}
+
+/*
+    turnbg : 定义的动画名称
+    1s : 动画时间
+    linear : 动画以何种运行轨迹完成一个周期
+    infinite :规定动画应该无限次播放
+   */
+@keyframes turnloading{
+  0%{-webkit-transform:rotate(0deg);}
+  25%{-webkit-transform:rotate(90deg);}
+  50%{-webkit-transform:rotate(180deg);}
+  75%{-webkit-transform:rotate(270deg);}
+  100%{-webkit-transform:rotate(360deg);}
+}
+
+.loading-left-bg-cp{
+  width: 80px;
+  height: 80px;
+  background-image: url("../../../static/login/loginLeftCpL.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin: 0 auto;
+  z-index: 9;
+  position: absolute;
+  top: 0; /*偏移*/
+  animation:turnloading 2s linear infinite;
+  left: -1px;
+}
