@@ -156,12 +156,13 @@
     height: calc(100vw * 0.58 * 0.7);
     background-image: url("./../../static/login/mmLogo.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 75%;
     margin: 0 auto;
     position: relative;
     top: 50%;
-    border-radius: 20%;
+    border-radius: 50%;
     background-position: center;
+    background-color: #FFFFFF;
   }
 
   /*
